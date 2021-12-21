@@ -1,0 +1,70 @@
+div#modal {
+    color: white;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(100,100,100,0.7);
+    z-index: 10000;
+    display: none;
+}
+
+div#modal div#messages {
+    width: 400px;
+    height: 222px;
+    position: fixed;
+    top: 211px;
+    left: calc(50vw - 200px);
+    background: ghostwhite;
+    border: 1px solid darkgreen;
+    box-shadow: black 0px 0px 8px 2px;
+}
+
+div#modal div#messages > h2 {
+    margin: 0;
+    padding: 8px 16px;
+    margin: 0 0 16px 0;
+    background: sienna;
+    border-color: white;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+div#modal div#messages p {
+    color: black;
+    margin: 0;
+    padding: 16px;
+}
+
+div#modal div#messages button#close {
+    position: absolute;
+    bottom: 20px;
+    left: 140px;
+    border: solid darkblue 1px;
+}
+
+div#modal div#messages button.option {
+    background: darkgrey;
+    border: solid grey 1px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+div#modal button {
+    background: dodgerblue;
+    border: solid white 1px;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+div#modal div#messages button:hover {
+    background: darkorange;
+}

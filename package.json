@@ -1,0 +1,14 @@
+{
+  "name": "@guzo/modal",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ianfinch/modal#readme",
+  "description": "A simple modal dialogue",
+  "main": "modal.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Finch",
+  "url": "https://ian-says.com",
+  "license": "Apache-2.0"
+}
