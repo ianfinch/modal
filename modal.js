@@ -17,7 +17,10 @@ const closeModal = ev => {
         alert(queuedAlert.header, queuedAlert.msg);
     }
 
-    modalHub.publish("modal-closed", { result: ev.target.textContent, ref: modal.getAttribute("modal-ref") });
+    modalHub.publish("modal-closed", {
+        result: ev.target.textContent,
+        metadata: JSON.parse(modal.getAttribute("modal-metadata"))
+    });
 };
 
 /**
@@ -95,10 +98,10 @@ const init = hub => {
 /**
  * Pop up the alert dialog
  */
-const alert = ({header, msg, ref}) => {
+const alert = ({header, msg, metadata}) => {
 
     const modal = document.getElementById("modal");
-    modal.setAttribute("modal-ref", ref);
+    modal.setAttribute("modal-metadata", JSON.stringify(metadata));
     if (modal.style.display === "block") {
         backlog.push ({ header, msg });
         return;
@@ -133,10 +136,10 @@ const optionButton = legend => {
 /**
  * Let the user choose from multiple options
  */
-const options = ({header, options, ref}) => {
+const options = ({header, options, metadata}) => {
 
     const modal = document.getElementById("modal");
-    modal.setAttribute("modal-ref", ref);
+    modal.setAttribute("modal-metadata", JSON.stringify(metadata));
 
     if (modal.style.display === "block") {
         backlog.push ({ header, msg });
